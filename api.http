@@ -1,0 +1,116 @@
+### Features API
+### Admin Config
+GET http://localhost:8080/api/admin/features/config
+Accept: application/json
+
+### Create
+POST http://localhost:8080/api/admin/features
+Content-Type: application/json
+
+{ "name":  "new feature" }
+
+### Get All
+GET http://localhost:8080/api/admin/features
+Accept: application/json
+
+### Autocomplete
+GET http://localhost:8080/api/admin/features/autocomplete?q=new%20feature
+Accept: application/json
+
+### Get by ID
+GET http://localhost:8080/api/admin/features/1
+Accept: application/json
+
+### Update Multiple
+PUT http://localhost:8080/api/admin/features
+Content-Type: application/json
+
+[{ "id": 1, "name":  "new feature" }]
+
+#### Update
+PUT http://localhost:8080/api/admin/features/1
+Content-Type: application/json
+
+{ "id": 1, "name": "some new name" }
+
+### Delete
+DELETE http://localhost:8080/api/admin/features/1
+Content-Type: application/json
+
+### Rooms API
+### Admin Config
+GET http://localhost:8080/api/admin/rooms/config
+Accept: application/json
+
+### Create
+POST http://localhost:8080/api/admin/rooms
+Content-Type: application/json
+
+{ "floor":  13, "occupancy": 4, "description": "a description that is unlucky", "features": [{"id": "1"}] }
+
+### Get All
+GET http://localhost:8080/api/admin/rooms
+Accept: application/json
+
+### Autocomplete
+GET http://localhost:8080/api/admin/rooms/autocomplete?q=unlucky
+Accept: application/json
+
+### Get by ID
+GET http://localhost:8080/api/admin/rooms/1
+Accept: application/json
+
+### Update Multiple
+PUT http://localhost:8080/api/admin/rooms
+Content-Type: application/json
+
+[{ "floor":  13, "occupancy": 4, "description": "a description that is unlucky", "features": [{"id": "1"}] }]
+
+#### Update
+PUT http://localhost:8080/api/admin/rooms/1
+Content-Type: application/json
+
+{ "id": 1, "floor":  13, "occupancy": 4, "description": "a description that is lucky", "features": [{"id": "1"}] }
+
+### Delete
+DELETE http://localhost:8080/api/admin/rooms/1
+Content-Type: application/json
+
+### Hotels API
+### Admin Config
+GET http://localhost:8080/api/admin/hotels/config
+Accept: application/json
+
+### Create
+POST http://localhost:8080/api/admin/hotels
+Content-Type: application/json
+
+{ "name":  "Comfort Suites", "address": "123 Some Street", "rooms": [{"id": "1"}] }
+
+### Get All
+GET http://localhost:8080/api/admin/hotels
+Accept: application/json
+
+### Autocomplete
+GET http://localhost:8080/api/admin/hotels/autocomplete?q=Comfort
+Accept: application/json
+
+### Get by ID
+GET http://localhost:8080/api/admin/hotels/1
+Accept: application/json
+
+### Update Multiple
+PUT http://localhost:8080/api/admin/hotels
+Content-Type: application/json
+
+[{ "name":  "Comfort Suites", "address": "123 Some Street, Chicago", "rooms": [{"id": "1"}] }]
+
+#### Update
+PUT http://localhost:8080/api/admin/hotels/1
+Content-Type: application/json
+
+{ "name":  "Comfort Suites", "address": "123 Some Street, Chicago IL 60601", "rooms": [{"id": "1"}] }
+
+### Delete
+DELETE http://localhost:8080/api/admin/hotels/1
+Content-Type: application/json

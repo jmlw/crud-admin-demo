@@ -1,0 +1,14 @@
+
+spring:
+  jpa:
+    open-in-view: false
+#  datasource:
+#    url: jdbc:h2:./db/demo;DB_CLOSE_ON_EXIT=FALSE
+
+#logging:
+#  level:
+#    org:
+#      springframework: INFO
+#      hibernate:
+#        SQL: DEBUG
+#        type: TRACE

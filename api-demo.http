@@ -1,0 +1,111 @@
+### Features API
+### Create
+POST http://localhost:8080/api/admin/features
+Content-Type: application/json
+
+{ "name":  "new feature" }
+
+### Get All
+GET http://localhost:8080/api/admin/features
+Accept: application/json
+
+### Autocomplete
+GET http://localhost:8080/api/admin/features/autocomplete?q=new%20feature
+Accept: application/json
+
+### Autocomplete No Results
+GET http://localhost:8080/api/admin/features/autocomplete?q=does%20it%20exist
+Accept: application/json
+
+### Get by ID
+GET http://localhost:8080/api/admin/features/1
+Accept: application/json
+
+### Update Multiple
+PUT http://localhost:8080/api/admin/features
+Content-Type: application/json
+
+[{ "id": 1, "name":  "King Bed" }]
+
+#### Update
+PUT http://localhost:8080/api/admin/features/1
+Content-Type: application/json
+
+{ "id": 1, "name": "Queen Bed" }
+
+
+
+
+### Rooms API
+### Create
+POST http://localhost:8080/api/admin/rooms
+Content-Type: application/json
+
+{ "floor":  13, "occupancy": 4, "description": "a description that is unlucky", "features": [{"id": "1"}] }
+
+### Get All
+GET http://localhost:8080/api/admin/rooms
+Accept: application/json
+
+### Autocomplete
+GET http://localhost:8080/api/admin/rooms/autocomplete?q=unlucky
+Accept: application/json
+
+### Autocomplete No Results
+GET http://localhost:8080/api/admin/rooms/autocomplete?q=King%20Bed%20Suite
+Accept: application/json
+
+### Get by ID
+GET http://localhost:8080/api/admin/rooms/1
+Accept: application/json
+
+### Update Multiple
+PUT http://localhost:8080/api/admin/rooms
+Content-Type: application/json
+
+[{ "floor":  13, "occupancy": 4, "description": "Beach View King Bed Suite", "features": [{"id": "1"}] }]
+
+#### Update
+PUT http://localhost:8080/api/admin/rooms/1
+Content-Type: application/json
+
+{ "id": 1, "floor":  13, "occupancy": 4, "description": "Lake View King Bed Suite", "features": [{"id": "1"}] }
+
+
+
+
+### Hotels API
+### Create
+POST http://localhost:8080/api/admin/hotels
+Content-Type: application/json
+
+{ "name":  "Comfort Suites", "address": "123 Some Street", "rooms": [{"id": "1"}] }
+
+### Get All
+GET http://localhost:8080/api/admin/hotels
+Accept: application/json
+
+### Autocomplete
+GET http://localhost:8080/api/admin/hotels/autocomplete?q=Comfort
+Accept: application/json
+
+
+### Autocomplete
+GET http://localhost:8080/api/admin/hotels/autocomplete?q=Scary
+Accept: application/json
+
+### Get by ID
+GET http://localhost:8080/api/admin/hotels/1
+Accept: application/json
+
+### Update Multiple
+PUT http://localhost:8080/api/admin/hotels
+Content-Type: application/json
+
+[{ "name":  "Comfort Suites", "address": "123 Some Street, Chicago", "rooms": [{"id": "1"}] }]
+
+#### Update
+PUT http://localhost:8080/api/admin/hotels/1
+Content-Type: application/json
+
+{ "name":  "Comfort Suites", "address": "123 Some Street, Chicago IL 60601", "rooms": [{"id": "1"}] }
