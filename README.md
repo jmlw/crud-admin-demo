@@ -21,3 +21,5 @@ See `api-demo.http` for HTTP requests that demonstrate creating entities, modify
 ---
 
 **NOTE: This is not intended for production use. It should serve only as an example of how automated CRUD for JPA entities could be built.**
+
+*please pardon the atrocities committed within*
